@@ -26,7 +26,8 @@ class autenticacaoUsuario(View):
                 if user.is_active:
                         login(self.request, user)
                         #return redirect(reverse_lazy('index'))
-                        return redirect(reverse_lazy('adicionar-noticias'))
+                        return redirect(reverse_lazy('listar-noticias'))
+                        #return render (request, 'index.html', context)
                 else:
                         context.update(message='Usuário inativo')
         else:

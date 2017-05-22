@@ -6,12 +6,10 @@
         <title> OrganizaTarefas </title>
         {% load staticfiles %}
         <script src="{% static "js/jquery.js" %}"></script>
-        <script src="{% static "materialize/js/materialize.min.js" %}"></script>
         <!--<link rel="stylesheet" href="{% static "css/bootstrap.css" %}"/>-->
         <link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.min.css" %}"/>
-        <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+        <link rel="stylesheet" href="{% static "css/styles.css" %}"/>
 		<link rel="stylesheet" href="{% static "materialize/css/materialize.min.css" %}"/>
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta content="width=divice-width, inital-scale=1, maximum-scale=1, user-scalable=no" name="view"/> 
     </head>
 
@@ -23,7 +21,7 @@
 				<a class="btn-close"><i class="fa fa-times" aria-hidden="true"></i>-->
 				<ul id="nav-mobile" class="right hide-on-med-and-down band">
 					<li>
-						<a href="tarefas/adicionar" title="Adicionar Tarefas">
+						<a href="noticias/adicionar" title="Adicionar Tarefas">
 							<i class="fa fa-plus" aria-hidden="true"></i> ADICIONAR
 						</a>
 					</li>
@@ -38,19 +36,20 @@
 
 		<div class="banner">
 			<div>
-                <!--Logo da OBR-TO-->
-				<img class="avatarImgs" src="/static/img/userAvatar.png">
+                <!--Logo da OBR-TO
+				<img class="avatarImgs" src="/static/img/userAvatar.png">-->
 			</div>
 
 			<div class="title" >
 				<h2>SEJA BEM-VINDO, {{user.get_full_name}}</h2> <!--user.get_full_name-->
-				<h5>a um ambiente desenvolvido especialmente para você.</h5>
+				<h5>.</h5>
             </div>
         </div>
 
 		<!--TAREFAS INSERIDAS
 		<h2 class="section-heading-add"><b>MINHAS</b> TAREFAS </h2>
 		<hr> -->
+		<!--
 		<div  data-toggle="modal" data-target=".bs-example-modal-lg" class="container">
 			<div class="section">
 				<div class="row">
@@ -68,7 +67,6 @@
 										<a href="/tarefas/{{tarefas.pk}}" class="edicao" title="Editar"><i class="fa fa-pencil" title="Editar" aria-hidden="true"></i></a>
 										<a href="/tarefas/excluir/{{tarefas.pk}}" class="edicao" title="Excluir"><i class="fa fa-trash" title="Excluir" aria-hidden="true"></i></a>
 										<a href="{% url 'compartilhar-tarefas'%}?id_tarefa={{tarefas.pk}}" class="edicao" title="Compartilhar" method="get"><i class="fa fa-share-alt" title="Compartilhar" aria-hidden="true"></i></a>
-										<!--<a href="/compartilhamento/{{tarefas.pk}}" class="edicao"><i class="fa fa-share-alt" title="Compartilhar" aria-hidden="true"></i></a>-->
 									</div>
 								</div>
 							</div>
@@ -87,8 +85,9 @@
 				</div>
 			</div>
 		</div>
-
+		-->
         <!-- RODAPÉ -->
+		<!--
 		<footer class="footerRodape">
 			<div class="social-icons">
 				<a href="https://www.facebook.com/osmirmariano" target="_blank"><i class="fa fa-facebook"></i></a>
@@ -99,8 +98,9 @@
 			</div>
 			<p class="copyrightFooter">Copyright &copy 2017 - <b>Organiza</b>Tarefas. <br/>Todos os direitos reservados.</p>
         </footer>
-
+		-->
         <!--jQuery -->
+		<!--
         <script>
 			$(".btn-menu").click(function(){
 				$(".menu").show();
@@ -109,8 +109,9 @@
 				$(".menu").hide();
 			});
 		</script>
-		
+		-->
         <!-- JAVASCRIPT -->
+		<!--
 		<script>
 			jQuery("document").ready(function($){
 		    var menu = $('.cabecalho');
@@ -123,5 +124,6 @@
 		    });
 		});
 		</script>
+		-->
     </body>
 </html>

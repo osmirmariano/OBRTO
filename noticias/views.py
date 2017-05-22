@@ -16,9 +16,11 @@ class ListarNoticia(LoginRequiredMixin, ListView):
     """
     Formulario para listas as noticas adicionadas
     """
+    
+    login_url = '/'
     model = Noticia
     template_name = 'index.html'
-    login_url = '/'
+
     #def get_queryset(self):
         #queryset = Tarefas.objects.filter(dono=self.request.user)
         #return queryset
