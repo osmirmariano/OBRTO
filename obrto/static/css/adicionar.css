@@ -1,0 +1,42 @@
+@charset 'UTF-8';
+body{
+	background-color: #CED1CC;
+}
+
+
+/*Formulário*/
+.formulario{
+	padding: 5%;
+}
+.panel .panel-info{
+	margin-top: 5px;
+}
+
+.descricaoTitulo{
+	font-size: 1.6em;
+	color: black;	
+	text-align: center;
+	text-decoration: 900;
+}
+
+.format{
+	float: right;
+	margin-top: 4%;
+}
+
+
+.cadastro{
+    text-align: center !important;
+    font-weight: 900;
+    font-size: 2em;
+    color: white;
+    text-transform: uppercase;
+}
+
+.tam{
+	font-size: 1.5em;
+}
+
+.tobar{
+	background-color: #424242;
+}

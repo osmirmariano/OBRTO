@@ -32,4 +32,37 @@ class AdicionarNoticia(LoginRequiredMixin, CreateView):
     model = Noticia
     form_class = FormularioNoticia
     template_name = 'noticias/adicionar.html'
-    success_url = reverse_lazy('listar-tarefas')
+    success_url = reverse_lazy('listar-noticias')
+
+
+
+
+class EditarNoticia(LoginRequiredMixin, UpdateView):
+    """
+    Formulario para editar as tarefas
+    """
+    login_url = '/'
+    model = Noticia
+    form_class = FormularioNoticia
+    template_name = 'noticias/editar.html'
+    success_url = reverse_lazy('listar-noticias')
+
+
+class VisualizarNoticia(LoginRequiredMixin, UpdateView):
+    """
+    Formulario para editar as tarefas
+    """
+    login_url = '/'
+    model = Noticia
+    form_class = FormularioNoticia
+    template_name = 'noticias/visualizar.html'
+   # success_url = reverse_lazy('visualizar-tarefas')
+
+class DeletarNoticia(LoginRequiredMixin, DeleteView):
+    """
+    Formulario para excluir as tarefas
+    """
+    login_url = '/'
+    model = Noticia
+    template_name = 'noticias/excluir.html'
+    success_url = reverse_lazy('listar-noticias')

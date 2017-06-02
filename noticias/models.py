@@ -14,7 +14,7 @@ class Noticia(models.Model):
     image = models.ImageField('Imagem',upload_to='noticia', blank=True)
 
     def __unicode__(self):
-        return '{0} - {1} - {2} - {3} - {4}'.format(
+        return '{0} - {1} - {2} - {3}'.format(
             self.titulo,
             self.resumo,
             self.descricao,

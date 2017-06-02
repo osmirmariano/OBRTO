@@ -13,9 +13,12 @@
         <meta content="width=divice-width, inital-scale=1, maximum-scale=1, user-scalable=no" name="view"/> 
     </head>
 
-    <body>		
-		<nav>
+    <body style="background-color: #f5f5f5;">		
+		<nav class="tobar">
 			<div class="nav-wrapper">
+				<div class="left hide-on-med-and-down band" style="text-transform: uppercase; margin-left: 5%; font-weight: 900;">
+					{{user.get_full_name}}
+				</div>
 				<ul id="nav-mobile" class="right hide-on-med-and-down band">
 					<li>
 						<a href="adicionar" title="Adicionar Tarefas">
@@ -38,8 +41,57 @@
 			</div>
 
 			<div class="title" >
+				<h2>Robótica computacional</h2> 
             </div>
         </div>
+
+	  	<div  data-toggle="modal" data-target=".bs-example-modal-lg" class="container">
+			<div class="section">
+				<div class="row">
+					{% for noticia in object_list %}
+						<a href="/noticia/visualizar/{{noticia.pk}}">
+							<div class="col s12 m6 ponteiro"> 
+								<div class="card">
+									<div class="card-image">
+										{% if noticia.image %}
+											<div class="card-image">
+												<img src="{{noticia.image}}">
+												<span class="card-title">{{ noticia.titulo }}</span>
+											</div>
+										{% else %}
+											<div class="card-image">
+												<img src="{% static 'img/fundo.jpg' %}">
+												<span class="card-title">{{ noticia.titulo }}</span>
+											</div>
+										{% endif %}
+									</div>
+									<div class="card-content">
+										<p>{{ noticia.resumo }}.</p>
+									</div>
+									<div class="card-action">
+										<a href="/noticia/{{noticia.pk}}" class="edicao" title="Editar"><i class="fa fa-pencil" title="Editar" aria-hidden="true"></i></a>
+										<a href="/noticia/excluir/{{noticia.pk}}" class="edicao" title="Excluir"><i class="fa fa-trash" title="Excluir" aria-hidden="true"></i></a>
+									</div>
+								</div>
+							</div>
+						</a>
+					{% empty %}
+						<div class="row">
+							<div class="col s12 m12 ponteiro"> 
+								<div class="card-panel">
+									<div class="card-content white-text">
+										<span class="tituloBanco">Não existem <b>Tarefas</b> cadastradas no momento. Crie sua primeira tarefa em <b>+ ADICIONAR</b>!</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+
+
+
 
     </body>
 </html>
